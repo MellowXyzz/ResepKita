@@ -27,15 +27,25 @@ $result = mysqli_query($koneksi, $query);
     rel="stylesheet" />
 </head>
 
-<body class="bg-no-repeat bg-cover bg-fixed" style="background-image: url(&quot;./assets/backgroundindex.jpg&quot;)">
+<body class=" bg-no-repeat bg-cover bg-fixed" style="background-image: url(&quot;./assets/backgroundindex.jpg&quot;)">
   <nav
-    class="fixed top-4 left-0 right-0 z-50 w-[95%] mx-auto rounded-full shadow-xl py-5 px-8 bg-cover bg-center"
+    class="flex justify-between fixed top-4 left-0 right-0 z-100 w-[99%] mx-auto rounded-xl shadow-xl py-5 px-8 bg-cover bg-center border- border-neutral-900"
     style="background-image: url('./assets/navbg.jpg')">
+    <img src="assets/mega1.png" alt="" class="absolute right-44 -top-9 w-21 h-15 scale-150 z-100">
+    <img src="assets/mega1.png" alt="" class="absolute left-44 top-13 w-21 h-15 scale-150 z-100">
+    <img src="assets/mega3.png" alt="" class="absolute -left-2 -top-12 w-21 h-15 scale-160 z-100">
+    <img src="assets/mega2.png" alt="" class="absolute -right-8 top-15 w-21 h-15 scale-130 z-100">
+  
+ <div>
+        <a href="index.php"
+          class="font-bold font-[fredoka] text-3xl text-yellow-950">
 
-    <div class="flex items-center justify-between">
+          Resep Kita
 
+        </a>
+      </div>
 
-      <div class="flex items-center gap-6">
+    <div class="flex items-center gap-7  ">
 
         <a href="index.php"
           class="font-bold font-[Fredoka] text-yellow-950 hover:text-yellow-700 transition">
@@ -47,19 +57,6 @@ $result = mysqli_query($koneksi, $query);
           Kategori
         </a>
 
-      </div>
-
-
-      <div>
-        <a href="index.php"
-          class="font-bold font-[Playfair Display] text-3xl text-yellow-950">
-
-          Resep Kita
-
-        </a>
-      </div>
-
-      <div class="flex items-center gap-6">
 
         <a href="create.php"
           class="font-bold font-[Fredoka] text-yellow-950 hover:text-yellow-700 transition">
@@ -70,9 +67,6 @@ $result = mysqli_query($koneksi, $query);
           class="font-bold font-[Fredoka] text-yellow-950 hover:text-yellow-700 transition">
           Cari Resep
         </a>
-
-        <div class="flex items-center gap-3">
-
           <span class="font-[Fredoka] text-sm text-yellow-950">
             Halo,
             <?= htmlspecialchars($_SESSION['username']); ?>
@@ -85,19 +79,25 @@ $result = mysqli_query($koneksi, $query);
 
           </a>
 
-        </div>
 
-      </div>
 
     </div>
 
   </nav>
+
+<!-- Transparant -->
+  <div class="h-screen">
+
+  </div>
   <!-- POSTER istilahnya -->
 
-  <div class="rounded-xl h-screen mt-50 top-4 shadow-xl mx-auto"
+  <div class="relative h-screen  top-4 shadow-xl mx-auto w-full"
     style="background-image: url(&quot;./assets/navbg.jpg&quot;)" ;>
+    <img src="assets/pembatas.png" alt="" class="absolute left-80 top-6 w-100 h-80 scale-500">
+    <img src="assets/wayang.png" alt="" class=" absolute -left-9 top-3 w-21 h-32 scale-340 rotate-7">
+    <img src="assets/pembatas.png" alt="" class="absolute left-80 -bottom-100 w-100 h-80 scale-500">
     <section class="w-full min-h-screen flex items-center justify-center px-10 gap-90">
-      <div class="max-w-7xl w-full flex items-center jusi">
+      <div class="max-w-7xl w-full flex items-center">
         <div class="w-[35%] relative">
           <h1 class="text-[80px] font-black font-[playfair-display] uppercase text-black">
             Nikmati <br />
@@ -120,9 +120,9 @@ $result = mysqli_query($koneksi, $query);
         </div>
       </div>
     </section>
-  </div>
 
-  <section class="rounded-xl h-screen mt-20 top-4 shadow-xl mx-auto px-10 py-10"
+
+  <section class="rounded-xl h-screen mt-20 top-4 shadow-xl mx-auto px-10"
     style="background-image: url(&quot;./assets/navbg.jpg&quot;)" ;>
 
     <h1 class="text-3xl font-[playfair-dislay] font-bold mb-8 text-yellow-950">
@@ -148,7 +148,7 @@ $result = mysqli_query($koneksi, $query);
 
             <!-- JUDUL -->
             <h2 class="text-xl font-[fredoka] font-bold text-yellow-950 mb-2">
-              <?= htmlspecialchars($data['judul']); ?>
+              <?= htmlspecialchars($data['judul']); ?> 
             </h2>
 
             <!-- USER -->
@@ -199,6 +199,7 @@ $result = mysqli_query($koneksi, $query);
     </div>
 
   </section>
+    </div>
 </body>
 
 </html>

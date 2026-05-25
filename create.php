@@ -10,7 +10,7 @@ if (!isset($_SESSION['username'])) {
 
 if (isset($_POST['simpan'])) {
 
-    
+
     $id = $_SESSION['id'];
     $judul = htmlspecialchars($_POST['judul']);
     $deskripsi = htmlspecialchars($_POST['deskripsi']);
@@ -18,20 +18,20 @@ if (isset($_POST['simpan'])) {
     $bahan = htmlspecialchars($_POST['bahan']);
     $langkah = htmlspecialchars($_POST['langkah']);
 
-    
+
     $foto = $_FILES['foto']['name'];
     $tmp = $_FILES['foto']['tmp_name'];
 
 
     $folder = "uploads/";
 
-    
+
     $namaFoto = time() . "_" . $foto;
 
-    
+
     if (move_uploaded_file($tmp, $folder . $namaFoto)) {
 
-        
+
         $query = "INSERT INTO resep 
         (id, judul, deskripsi, kategori_daerah, foto, bahan, langkah)
         VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -57,13 +57,11 @@ if (isset($_POST['simpan'])) {
                 window.location='index.php';
             </script>
             ";
-
         } else {
             echo "Gagal menambahkan resep!";
         }
 
         $stmt->close();
-
     } else {
         echo "Upload foto gagal!";
     }
@@ -77,45 +75,57 @@ if (isset($_POST['simpan'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Fredoka:wght@300..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
     <title>Create Resep</title>
 </head>
 
 <body class="bg-gray-50">
 
-    
-    <nav class="flex items-center justify-between px-6 md:px-10 py-4 bg-white shadow">
 
-        <div class="flex items-center gap-3">
-            <img src="./assets/logo.png" alt="Logo" class="w-8 h-8 object-contain" />
+  <nav
+    class="flex justify-between z-100 w-full shadow-xl rounded-xl py-5 px-8 bg-cover bg-center border- border-neutral-900"
+    style="background-image: url('./assets/navbg.jpg')">
+    <img src="assets/mega1.png" alt="" class="absolute right-27 -top-6 w-17 h-12 scale-150 z-100">
+    <img src="assets/mega1.png" alt="" class="absolute left-37 top-11 w-17 h-12 scale-150 z-100">
+    <img src="assets/mega3.png" alt="" class="absolute -left-3 -top-6 w-17 h-12 scale-160 z-100">
+    <img src="assets/mega2.png" alt="" class="absolute -right-1 top-15 w-17 h-12 scale-130 z-100">
+  
+ <div>
+        <a href="index.php"
+          class="font-bold font-[fredoka] text-3xl text-yellow-950">
 
-            <span class="text-2xl font-bold text-yellow-950 font-[Playfair-Display]">
-                Resep Kita
-            </span>
-        </div>
+          Resep Kita
 
-        <div class="flex items-center gap-4">
+        </a>
+      </div>
 
-            <span class="font-[Fredoka] text-sm">
-                Halo, <?= htmlspecialchars($_SESSION['username']); ?>
-            </span>
+    <div class="flex items-center gap-7  ">
 
-            <a href="logout.php"
-                class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded">
-                Logout
-            </a>
+          <span class="font-[Fredoka] text-sm text-yellow-950">
+            Halo,
+            <?= htmlspecialchars($_SESSION['username']); ?>
+          </span>
 
-        </div>
+          <a href="logout.php"
+            class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition">
 
-    </nav>
+            Logout
 
-    
+          </a>
+
+
+
+    </div>
+
+  </nav>
+
+    <div class="pt-9"></div>
+
     <section class="px-10 py-6">
 
         <h1 class="text-3xl font-bold text-yellow-950 font-[Playfair-Display]">
@@ -128,12 +138,12 @@ if (isset($_POST['simpan'])) {
 
     </section>
 
-    
+
     <section class="mx-10 mb-10 bg-white rounded-lg shadow p-6">
 
         <form action="" method="POST" enctype="multipart/form-data" class="flex flex-col gap-5">
 
-            
+
             <div>
                 <label class="block mb-2 font-[Fredoka] font-semibold text-yellow-950">
                     Foto Masakan
@@ -161,7 +171,7 @@ if (isset($_POST['simpan'])) {
                     class="w-full border p-2 rounded">
             </div>
 
-            
+
             <div>
                 <label class="block mb-2 font-semibold font-[Fredoka] text-yellow-950">
                     Deskripsi
@@ -174,7 +184,7 @@ if (isset($_POST['simpan'])) {
                     class="w-full border p-2 rounded"></textarea>
             </div>
 
-            
+
             <div>
                 <label class="block mb-2 font-semibold font-[Fredoka] text-yellow-950">
                     Kategori Daerah
@@ -195,7 +205,7 @@ if (isset($_POST['simpan'])) {
                 </select>
             </div>
 
-            
+
             <div>
                 <label class="block mb-2 font-[Fredoka] font-semibold text-yellow-950">
                     Bahan-Bahan
@@ -209,7 +219,7 @@ if (isset($_POST['simpan'])) {
                     class="w-full border p-2 rounded"></textarea>
             </div>
 
-            
+
             <div>
                 <label class="block mb-2 font-[Fredoka] font-semibold text-yellow-950">
                     Langkah-Langkah
@@ -223,7 +233,7 @@ if (isset($_POST['simpan'])) {
                     class="w-full border p-2 rounded"></textarea>
             </div>
 
-            
+
             <div class="flex items-center font-[Fredoka] gap-3">
 
                 <a href="index.php"

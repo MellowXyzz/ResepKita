@@ -20,14 +20,12 @@ $result = mysqli_query($koneksi, $query);
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Index-ResepKita</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Fredoka:wght@300..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 
-<body class=" bg-no-repeat bg-cover bg-fixed" style="background-image: url(&quot;./assets/backgroundindex.jpg&quot;)">
+<body class="bg-no-repeat bg-cover bg-fixed" style="background-image: url(&quot;./assets/backgroundindex.jpg&quot;)">
   <nav
     class="flex justify-between fixed top-4 left-0 right-0 z-100 w-[99%] mx-auto rounded-xl shadow-xl py-5 px-8 bg-cover bg-center border- border-neutral-900"
     style="background-image: url('./assets/navbg.jpg')">
@@ -110,7 +108,7 @@ $result = mysqli_query($koneksi, $query);
           </p>
 
           <!-- BUTTON -->
-          <button class="mt-10 bg-black text-white px-10 py-4 rounded-full text-lg hover:scale-105 duration-300">
+          <button class="mt-10 bg-black text-white px-10 py-4 rounded-full text-lg hover:scale-105 font-[fredoka] duration-300">
             LIHAT RESEP
           </button>
         </div>
@@ -125,7 +123,7 @@ $result = mysqli_query($koneksi, $query);
   <section class="rounded-xl h-screen mt-20 top-4 shadow-xl mx-auto px-10"
     style="background-image: url(&quot;./assets/navbg.jpg&quot;)" ;>
 
-    <h1 class="text-3xl font-[playfair-dislay] font-bold mb-8 text-yellow-950">
+    <h1 class="text-3xl font-[playfair-display] font-bold mb-8 text-yellow-950">
       Resep Terbaru
     </h1>
 

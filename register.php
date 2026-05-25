@@ -45,7 +45,7 @@ if (isset($_POST['register'])) {
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Fredoka:wght@300..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <title>Register-ResepKita</title>
 </head>
 <body class="bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/background2.jpg');">
@@ -57,7 +57,7 @@ if (isset($_POST['register'])) {
                 
                 <div class="flex items-center gap-3 mb-3">
                     <img src="./assets/logo.png" alt="Logo" class="w-12 h-12 object-contain" />
-                    <span class="text-4xl font-[playfair-display] text-yellow-950 font-bold">Resep Kita</span>
+                    <span class="text-4xl font-[arapey] text-yellow-950 font-bold">Resep Kita</span>
                 </div>
                 
                 <span class="font-light font-[fredoka] text-gray-400 mb-8">

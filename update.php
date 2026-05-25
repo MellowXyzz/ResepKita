@@ -117,7 +117,7 @@ if (isset($_POST['update'])) {
         <img src="assets/mega1.png" alt="" class="absolute right-20 -top-6 w-17 h-12 scale-150 z-100">
         <img src="assets/mega1.png" alt="" class="absolute left-40 top-11 w-17 h-12 scale-150 z-100">
         <img src="assets/mega3.png" alt="" class="absolute -left-3 -top-3 w-17 h-12 scale-160 z-100">
-        <img src="assets/mega2.png" alt="" class="absolute -right-1 top-10 w-17 h-12 scale-130 z-100">
+        <img src="assets/mega2.png" alt="" class="absolute -right-0 top-10 w-17 h-12 scale-130 z-100">
 
         <div>
             <a href="index.php"

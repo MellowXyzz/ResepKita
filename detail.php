@@ -92,10 +92,10 @@ $resultKomentar = $stmtKomen->get_result();
     <nav
     class="flex justify-between z-100 w-full shadow-xl rounded-xl py-5 px-8 bg-cover bg-center border- border-neutral-900"
     style="background-image: url('./assets/navbg.jpg')">
-    <img src="assets/mega1.png" alt="" class="absolute right-27 -top-6 w-17 h-12 scale-150 z-100">
-    <img src="assets/mega1.png" alt="" class="absolute left-37 top-11 w-17 h-12 scale-150 z-100">
-    <img src="assets/mega3.png" alt="" class="absolute -left-3 -top-6 w-17 h-12 scale-160 z-100">
-    <img src="assets/mega2.png" alt="" class="absolute -right-1 top-15 w-17 h-12 scale-130 z-100">
+    <img src="assets/mega1.png" alt="" class="absolute right-20 -top-6 w-17 h-12 scale-150 z-100">
+        <img src="assets/mega1.png" alt="" class="absolute left-40 top-11 w-17 h-12 scale-150 z-100">
+        <img src="assets/mega3.png" alt="" class="absolute -left-3 -top-3 w-17 h-12 scale-160 z-100">
+        <img src="assets/mega2.png" alt="" class="absolute -right-0 top-10 w-17 h-12 scale-130 z-100">
   
  <div>
         <a href="index.php"

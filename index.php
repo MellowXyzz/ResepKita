@@ -25,7 +25,7 @@ $result = mysqli_query($koneksi, $query);
   <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Fredoka:wght@300..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-no-repeat bg-cover bg-fixed" style="background-image: url(&quot;./assets/backgroundindex.jpg&quot;)">
+<body class=" bg-no-repeat bg-cover bg-fixed" style="background-image: url(&quot;./assets/backgroundindex.jpg&quot;)">
   <nav
     class="flex justify-between fixed top-4 left-0 right-0 z-100 w-[99%] mx-auto rounded-xl shadow-xl py-5 px-8 bg-cover bg-center border- border-neutral-900"
     style="background-image: url('./assets/navbg.jpg')">
@@ -91,9 +91,9 @@ $result = mysqli_query($koneksi, $query);
 
   <div class="relative h-screen  top-4 shadow-xl mx-auto w-full"
     style="background-image: url(&quot;./assets/navbg.jpg&quot;)" ;>
-    <img src="assets/pembatas.png" alt="" class="absolute left-80 top-6 w-100 h-80 scale-500">
+    <img src="assets/pembatas.png" alt="" class="absolute left-80 top-6 w-86 h-80 scale-500">
     <img src="assets/wayang.png" alt="" class=" absolute -left-9 top-3 w-21 h-32 scale-340 rotate-7">
-    <img src="assets/pembatas.png" alt="" class="absolute left-80 -bottom-100 w-100 h-80 scale-500">
+    <img src="assets/pembatas.png" alt="" class="absolute left-80 -bottom-100 w-86 h-80 scale-500">
     <section class="w-full min-h-screen flex items-center justify-center px-10 gap-90">
       <div class="max-w-7xl w-full flex items-center">
         <div class="w-[35%] relative">

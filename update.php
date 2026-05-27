@@ -28,7 +28,7 @@ if (isset($_POST['update'])) {
     $bahan = htmlspecialchars($_POST['bahan']);
     $langkah = htmlspecialchars($_POST['langkah']);
 
-    
+
     if ($_FILES['foto']['name'] != "") {
 
         $foto = $_FILES['foto']['name'];
@@ -39,7 +39,7 @@ if (isset($_POST['update'])) {
 
         move_uploaded_file($tmp, $folder . $namaFoto);
 
-        
+
         $update = "UPDATE resep 
         SET judul=?, deskripsi=?, kategori_daerah=?, foto=?, bahan=?, langkah=?
         WHERE id_resep=?";
@@ -56,10 +56,9 @@ if (isset($_POST['update'])) {
             $langkah,
             $id_resep
         );
-
     } else {
 
-        
+
         $update = "UPDATE resep 
         SET judul=?, deskripsi=?, kategori_daerah=?, bahan=?, langkah=?
         WHERE id_resep=?";
@@ -77,7 +76,7 @@ if (isset($_POST['update'])) {
         );
     }
 
-    
+
     if ($stmtUpdate->execute()) {
 
         echo "
@@ -86,11 +85,9 @@ if (isset($_POST['update'])) {
             window.location='index.php';
         </script>
         ";
-
     } else {
 
         echo "Gagal update resep!";
-
     }
 }
 ?>
@@ -114,27 +111,38 @@ if (isset($_POST['update'])) {
 
 <body class="bg-gray-50">
 
-    <!-- NAVBAR -->
-    <nav class="flex items-center justify-between px-6 md:px-10 py-4 bg-white shadow">
+    <nav
+        class="flex justify-between z-100 w-full shadow-xl rounded-xl py-5 px-8 bg-cover bg-center border- border-neutral-900"
+        style="background-image: url('./assets/navbg.jpg')">
+        <img src="assets/mega1.png" alt="" class="absolute right-20 -top-6 w-17 h-12 scale-150 z-100">
+        <img src="assets/mega1.png" alt="" class="absolute left-40 top-11 w-17 h-12 scale-150 z-100">
+        <img src="assets/mega3.png" alt="" class="absolute -left-3 -top-3 w-17 h-12 scale-160 z-100">
+        <img src="assets/mega2.png" alt="" class="absolute -right-0 top-10 w-17 h-12 scale-130 z-100">
 
-        <div class="flex items-center gap-3">
-            <img src="./assets/logo.png" alt="Logo" class="w-8 h-8 object-contain">
+        <div>
+            <a href="index.php"
+                class="font-bold font-[fredoka] text-3xl text-yellow-950">
 
-            <span class="text-2xl font-bold text-yellow-950 font-[Playfair Display]">
                 Resep Kita
-            </span>
+
+            </a>
         </div>
 
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-7  ">
 
-            <span class="font-[Fredoka] text-sm">
-                Halo, <?= htmlspecialchars($_SESSION['username']); ?>
+            <span class="font-[Fredoka] text-sm text-yellow-950">
+                Halo,
+                <?= htmlspecialchars($_SESSION['username']); ?>
             </span>
 
             <a href="logout.php"
-                class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded">
+                class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition">
+
                 Logout
+
             </a>
+
+
 
         </div>
 

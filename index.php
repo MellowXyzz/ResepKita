@@ -20,11 +20,9 @@ $result = mysqli_query($koneksi, $query);
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Index-ResepKita</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Fredoka:wght@300..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 
 <body class=" bg-no-repeat bg-center bg-cover bg-fixed" style="background-image: url(&quot;./assets/background.jpg&quot;)">
@@ -97,10 +95,16 @@ $result = mysqli_query($koneksi, $query);
 
   <div class="relative h-screen  top-4 shadow-xl mx-auto w-full"
     style="background-image: url(&quot;./assets/navbg.jpg&quot;)" ;>
+<<<<<<< HEAD
     <!-- asset -->
   
     <img src="assets/wayang.png" alt="" class=" absolute -left-9 top-3 w-21 h-32 scale-340 rotate-7">
 
+=======
+    <img src="assets/pembatas.png" alt="" class="absolute left-80 top-6 w-86 h-80 scale-500">
+    <img src="assets/wayang.png" alt="" class=" absolute -left-9 top-3 w-21 h-32 scale-340 rotate-7">
+    <img src="assets/pembatas.png" alt="" class="absolute left-80 -bottom-100 w-86 h-80 scale-500">
+>>>>>>> 8e7f0dcebe3c44d869ac63f71f40419c418c95a8
     <section class="w-full min-h-screen flex items-center justify-center px-10 gap-90">
       <div class="max-w-7xl w-full flex items-center">
         <div class="w-[35%] relative">
@@ -115,7 +119,7 @@ $result = mysqli_query($koneksi, $query);
           </p>
 
           <!-- BUTTON -->
-          <button class="mt-10 bg-black text-white px-10 py-4 rounded-full text-lg hover:scale-105 duration-300">
+          <button class="mt-10 bg-black text-white px-10 py-4 rounded-full text-lg hover:scale-105 font-[fredoka] duration-300">
             LIHAT RESEP
           </button>
         </div>
@@ -130,7 +134,7 @@ $result = mysqli_query($koneksi, $query);
   <section class="rounded-xl h-screen mt-20 top-4 shadow-xl mx-auto px-10"
     style="background-image: url(&quot;./assets/navbg.jpg&quot;)" ;>
 
-    <h1 class="text-3xl font-[playfair-dislay] font-bold mb-8 text-yellow-950">
+    <h1 class="text-3xl font-[playfair-display] font-bold mb-8 text-yellow-950">
       Resep Terbaru
     </h1>
 

@@ -26,7 +26,7 @@ $result = mysqli_query($koneksi, $query);
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body class=" bg-[length:300px_auto] bg-center bng-repeat bg-fixed" style="background-image: url('assets/card.png')">
+<body class=" bg-[length:300px_auto] bg-center bg-repeat bg-fixed" style="background-image: url('assets/card.png')">
   <nav
     class="flex justify-between fixed z-100 w-full mx-auto rounded- shadow-xl py-5 px-8 border-b border-neutral-900 bg-repeat bg-[length:300px_auto]"
     style="background-image: url('assets/navbg.jpg')">
@@ -128,16 +128,24 @@ $result = mysqli_query($koneksi, $query);
 <!-- batas -->
 
 </div>
-  <section class="min-h-screen shadow-xl mx-auto px-10 w-full py-12 bg-repeat bg-[length:300px_auto]" style="background-image: url('assets/navbg.jpg')">
-
-    <h1 class="text-4xl shadow-xl font-[Merryweather] font-bold mb-8 text-[#D4AF37] text-center uppercase italic bg-[#2D1B12] rounded-xl py-2">
+<div class="mt-4 rounded  px-10 py-6 bg-[#EFE6D5] border-2 border-[#c5b598]">
+ <h1 class="text-4xl  font-[Merryweather] font-bold text-yellow-950 text-center uppercase italic rounded-xl py-2">
       Resep Terbaru
     </h1>
+    <p class="text-gray-500 mt-2 font-[Fredoka] text-center">
+            Temukan resep pilihan anda
+        </p>
+    </div>
+
+    
+  <section class="min-h-screen shadow-xl mx-auto px-10 w-full py-12 bg-repeat bg-[length:300px_auto]" style="background-image: url('assets/navbg.jpg')">
+
+   
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
       <?php while ($data = mysqli_fetch_assoc($result)) : ?>
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition bg-bottom" style="background-image: url('assets/card.png')">
+        <div class="border-2 border-[#c5b598] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition bg-bottom" style="background-image: url('assets/card.png')">
           <img src="uploads/<?= $data['foto']; ?>" alt="<?= $data['judul']; ?>" class="w-full h-52 object-cover">
 
           <div class="p-5">

@@ -87,7 +87,7 @@ $resultKomentar = $stmtKomen->get_result();
     <title>Detail-ResepKita</title>
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-center bg-repeat bg-[length:300px_auto]" style="background-image: url('assets/navbg.jpg')">
 
     <nav
     class="flex justify-between  z-100 w-full mx-auto rounded- shadow-xl py-5 px-8 border-b border-neutral-900 bg-repeat bg-[length:300px_auto]"
@@ -114,7 +114,7 @@ $resultKomentar = $stmtKomen->get_result();
           </span>
 
           <a href="logout.php"
-            class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition">
+             class="bg-orange-900 text-white px-4 py-2 rounded-full hover:scale-110 hover:bg-yellow-900 font-[Merryweather] duration-300">
 
             Logout
 
@@ -127,7 +127,7 @@ $resultKomentar = $stmtKomen->get_result();
   </nav>
 
     <!-- JUDUL -->
-    <section class="px-10 py-6">
+    <section class=" mt-5 px-10 py-6 bg-[#EFE6D5] mb-4 border-2 border-[#c5b598] ">
 
         <h1 class="text-3xl font-bold text-yellow-950 font-[Playfair Display]">
 
@@ -153,7 +153,7 @@ $resultKomentar = $stmtKomen->get_result();
     </section>
 
     <!-- DETAIL RESEP -->
-    <section class="mx-10 mb-10 bg-white rounded-lg shadow p-6">
+    <section class="mx-10 mb-10 bg-[#EFE6D5] shadow-2xl rounded-2xl border-2 border-[#c5b598] p-6">
 
         <!-- FOTO -->
         <img
@@ -244,12 +244,12 @@ $resultKomentar = $stmtKomen->get_result();
                     rows="4"
                     required
                     placeholder="Tulis komentar..."
-                    class="w-full border p-4 rounded-lg"></textarea>
+                    class="w-full border border-[#c5b598] bg-[#F5EFE4] rounded p-2"></textarea>
 
                 <button
                     type="submit"
                     name="kirim_komentar"
-                    class="bg-yellow-950 hover:bg-yellow-800 text-white px-6 py-3 rounded w-fit">
+                    class="bg-orange-900 text-white py-5 px-5 rounded hover:scale-110 hover:bg-yellow-900 text-lg font-[Merryweather] duration-300 w-fit">
 
                     Kirim Komentar
 
@@ -258,7 +258,7 @@ $resultKomentar = $stmtKomen->get_result();
                 <div class="flex items-center gap-3">
 
                 <a href="index.php"
-                    class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded">
+                    class="bg-red-700 text-white px-4 py-2 rounded hover:scale-110 hover:bg-red-900 font-[Merryweather] duration-300">
                     Kembali
                 </a>
 
@@ -277,11 +277,11 @@ $resultKomentar = $stmtKomen->get_result();
 
             </h2>
 
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-4 ">
 
                 <?php while ($komen = mysqli_fetch_assoc($resultKomentar)) : ?>
 
-                    <div class="bg-gray-100 rounded-xl p-4">
+                    <div class="border border-[#c5b598] bg-[#F5EFE4] rounded p-5">
 
                         <div class="flex items-center gap-2 mb-2">
 

@@ -112,7 +112,7 @@ if (isset($_POST['update'])) {
     <title>Update Resep</title>
 </head>
 
-<body class="bg-gray-50">
+<body class=" bg-center bg-repeat bg-[length:300px_auto]" style="background-image: url('assets/navbg.jpg')">
 
     <nav
         class="flex justify-between  z-100 w-full mx-auto rounded- shadow-xl py-5 px-8 border-b border-neutral-900 bg-repeat bg-[length:300px_auto]"
@@ -139,7 +139,7 @@ if (isset($_POST['update'])) {
             </span>
 
             <a href="logout.php"
-                class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition">
+                class="bg-orange-900 text-white px-4 py-2 rounded-full hover:scale-110 hover:bg-yellow-900 font-[Merryweather] duration-300">
 
                 Logout
 
@@ -152,7 +152,7 @@ if (isset($_POST['update'])) {
     </nav>
 
     <!-- JUDUL -->
-    <section class="px-10 py-6">
+    <section class=" mt-5 px-10 py-6 bg-[#EFE6D5] mb-4 border-2 border-[#c5b598] ">
 
         <h1 class="text-3xl font-bold text-yellow-950 font-[Playfair Display]">
             Update Resep
@@ -165,7 +165,7 @@ if (isset($_POST['update'])) {
     </section>
 
     <!-- FORM -->
-    <section class="mx-10 mb-10 bg-white rounded-lg shadow p-6">
+    <section class="mx-10 mb-10 bg-[#EFE6D5] shadow-2xl rounded-2xl border-2 border-[#c5b598] p-6">
 
         <form action="" method="POST" enctype="multipart/form-data" class="flex flex-col gap-5">
 
@@ -184,7 +184,7 @@ if (isset($_POST['update'])) {
                     type="file"
                     name="foto"
                     accept="image/*"
-                    class="w-full border p-2 rounded">
+                    class="w-full border border-[#c5b598] bg-[#F5EFE4] rounded">
 
             </div>
 
@@ -200,7 +200,7 @@ if (isset($_POST['update'])) {
                     name="judul"
                     required
                     value="<?= htmlspecialchars($data['judul']); ?>"
-                    class="w-full border p-2 rounded">
+                    class="w-full border border-[#c5b598] bg-[#F5EFE4] rounded p-2">
 
             </div>
 
@@ -214,7 +214,8 @@ if (isset($_POST['update'])) {
                 <textarea
                     name="deskripsi"
                     rows="3"
-                    class="w-full border p-2 rounded"><?= htmlspecialchars($data['deskripsi']); ?></textarea>
+                    placeholder="Ceritakan tentang resep anda..."
+                    class="w-full border border-[#c5b598] bg-[#F5EFE4] rounded p-2"><?= htmlspecialchars($data['deskripsi']); ?></textarea>
 
             </div>
 
@@ -227,7 +228,7 @@ if (isset($_POST['update'])) {
 
                 <select
                     name="kategori_daerah"
-                    class="w-full border p-2 rounded">
+                    class="w-full border border-[#c5b598] bg-[#F5EFE4] rounded p-2">
 
                     <option value="jawa" <?= ($data['kategori_daerah'] == 'jawa') ? 'selected' : ''; ?>>
                         Jawa
@@ -264,7 +265,7 @@ if (isset($_POST['update'])) {
                     name="bahan"
                     rows="5"
                     required
-                    class="w-full border p-2 rounded"><?= htmlspecialchars($data['bahan']); ?></textarea>
+                    class="w-full border border-[#c5b598] bg-[#F5EFE4] rounded p-2"><?= htmlspecialchars($data['bahan']); ?></textarea>
 
             </div>
 
@@ -279,7 +280,7 @@ if (isset($_POST['update'])) {
                     name="langkah"
                     rows="5"
                     required
-                    class="w-full border p-2 rounded"><?= htmlspecialchars($data['langkah']); ?></textarea>
+                    class="w-full border border-[#c5b598] bg-[#F5EFE4] rounded p-2"><?= htmlspecialchars($data['langkah']); ?></textarea>
 
             </div>
 
@@ -287,14 +288,14 @@ if (isset($_POST['update'])) {
             <div class="flex items-center gap-3">
 
                 <a href="index.php"
-                    class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded">
+                    class="bg-red-700 text-white px-4 py-2 rounded-full hover:scale-110 hover:bg-red-900 font-[Merryweather] duration-300">
                     Batal
                 </a>
 
                 <button
                     type="submit"
                     name="update"
-                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                    class="bg-orange-900 text-white px-4 py-2 rounded-full hover:scale-110 hover:bg-yellow-900 font-[Merryweather] duration-300">
 
                     Update Resep
 

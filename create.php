@@ -84,7 +84,7 @@ if (isset($_POST['simpan'])) {
     <title>Create Resep</title>
 </head>
 
-<body class="bg-gray-50">
+<body class=" bg-center bg-repeat bg-[length:300px_auto]" style="background-image: url('assets/navbg.jpg')">
 
 
   <nav
@@ -97,7 +97,7 @@ if (isset($_POST['simpan'])) {
   
  <div>
         <a href="index.php"
-          class="font-bold font-[fredoka] text-3xl text-yellow-950">
+          class="font-bold font-[fredoka] text-3xl text-yellow-950 ">
 
           Resep Kita
 
@@ -124,9 +124,9 @@ if (isset($_POST['simpan'])) {
 
   </nav>
 
-    <div class="pt-9"></div>
+   
 
-    <section class="px-10 py-6">
+    <section class=" mt- px-10 py-6 bg-[#EFE6D5] mb-4 border-2 border-[#c5b598] ">
 
         <h1 class="text-3xl font-bold text-yellow-950 font-[Playfair-Display]">
             Tambah Resep Baru
@@ -139,7 +139,7 @@ if (isset($_POST['simpan'])) {
     </section>
 
 
-    <section class="mx-10 mb-10 bg-white rounded-lg shadow p-6">
+    <section class="mx-10 mb-10 p-6 bg-[#EFE6D5] shadow-2xl rounded-2xl border-2 border-[#c5b598]">
 
         <form action="" method="POST" enctype="multipart/form-data" class="flex flex-col gap-5">
 
@@ -154,12 +154,12 @@ if (isset($_POST['simpan'])) {
                     name="foto"
                     accept="image/*"
                     required
-                    class="w-full border p-2 rounded">
+                    class="w-full border border-[#c5b598] bg-[#F5EFE4] ">
             </div>
 
 
             <div>
-                <label class="block mb-2 font-[Fredoka] font-semibold text-yellow-950">
+                <label class="block mb-2 font-[Fredoka] font-semibold text-yellow-950 p-2">
                     Judul Resep
                 </label>
 
@@ -168,7 +168,7 @@ if (isset($_POST['simpan'])) {
                     name="judul"
                     required
                     placeholder="Contoh : Nasi Goreng Jawa"
-                    class="w-full border p-2 rounded">
+                    class="w-full border border-[#c5b598] bg-[#F5EFE4] rounded p-2">
             </div>
 
 
@@ -181,7 +181,7 @@ if (isset($_POST['simpan'])) {
                     name="deskripsi"
                     rows="3"
                     placeholder="Ceritakan tentang resep anda..."
-                    class="w-full border p-2 rounded"></textarea>
+                    class="w-full border border-[#c5b598] bg-[#F5EFE4] rounded p-2"></textarea>
             </div>
 
 
@@ -193,7 +193,7 @@ if (isset($_POST['simpan'])) {
                 <select
                     name="kategori_daerah"
                     required
-                    class="w-full border p-2 rounded">
+                    class="w-full p-2 border border-[#c5b598] bg-[#F5EFE4] rounded">
 
                     <option value="">Pilih kategori</option>
                     <option value="jawa">Jawa</option>
@@ -216,7 +216,7 @@ if (isset($_POST['simpan'])) {
                     required
                     rows="5"
                     placeholder="Contoh : Bawang putih, garam, ayam..."
-                    class="w-full border p-2 rounded"></textarea>
+                    class="w-full p-2 border border-[#c5b598] bg-[#F5EFE4] rounded"></textarea>
             </div>
 
 
@@ -230,21 +230,21 @@ if (isset($_POST['simpan'])) {
                     required
                     rows="5"
                     placeholder="Contoh : Panaskan minyak..."
-                    class="w-full border p-2 rounded"></textarea>
+                    class="w-full p-2 border border-[#c5b598] bg-[#F5EFE4] rounded"></textarea>
             </div>
 
 
             <div class="flex items-center font-[Fredoka] gap-3">
 
                 <a href="index.php"
-                    class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded">
+                    class="bg-red-700 text-white px-4 py-2 rounded-full hover:scale-110 hover:bg-red-900 font-[Merryweather] duration-300">
                     Batal
                 </a>
 
                 <button
                     type="submit"
                     name="simpan"
-                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                    class="bg-orange-900 text-white px-4 py-2 rounded-full hover:scale-110 hover:bg-yellow-900 font-[Merryweather] duration-300">
 
                     Simpan Resep
 

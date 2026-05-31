@@ -48,11 +48,10 @@ if (isset($_POST['login'])) {
     <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Fredoka:wght@300..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <title>Login-ResepKita</title>
 </head>
-<body class="bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/background2.jpg');">
+<body class=" bg-center bg-repeat bg-[length:300px_auto]" style="background-image: url('assets/navbg.jpg')">
 
-    <div class="flex items-center justify-center min-h-screen backdrop-blur-sm">
-        <div class="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0">
-
+    <div class="flex items-center justify-center min-h-screen shadow-xl " >
+        <div class="flex flex-col bg-[#EFE6D5] shadow-2xl rounded-2xl md:flex-row border-2 border-[#c5b598] ">
             <form action="" method="POST" class="flex flex-col justify-center p-8 md:p-14">
                 
                 <div class="flex items-center gap-3 mb-3">
@@ -60,7 +59,7 @@ if (isset($_POST['login'])) {
                     <span class="text-4xl font-[arapey] text-yellow-950 font-bold">Resep Kita</span>
                 </div>
                 
-                <span class="font-light font-[fredoka] text-gray-400 mb-8">
+                <span class="font-light font-[fredoka] text-gray-400 mb-8 text-yellow-950">
                     Selamat datang di ResepKita, Silahkan Login untuk melanjutkan !
                 </span>
 
@@ -70,7 +69,7 @@ if (isset($_POST['login'])) {
                     <span class="mb-2 font-[fredoka] text-yellow-950 text-md">Username</span>
                     <input
                         type="text"
-                        class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                        class="w-full p-2 border border-[#c5b598] bg-[#F5EFE4] rounded-full placeholder:font-light placeholder:text-gray-500"
                         name="name"
                         id="name" required />
                 </div>
@@ -80,7 +79,7 @@ if (isset($_POST['login'])) {
                         type="password"
                         name="pass"
                         id="pass"
-                        class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500" required />
+                        class="w-full p-2 border border-[#c5b598] bg-[#F5EFE4] rounded-full placeholder:font-light placeholder:text-gray-500" required />
                 </div>
                 
                 <button type="submit" name="login"
@@ -88,7 +87,7 @@ if (isset($_POST['login'])) {
                     Sign in
                 </button>
                 
-                <div class="text-center font-[fredoka] text-gray-400">
+                <div class="text-center font-[fredoka] text-yellow-500">
                     Belum punya akun?
                     <a href="register.php" class="font-bold text-yellow-950 hover:text-gray-600 transition-colors">Daftar disini</a>
                 </div>

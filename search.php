@@ -44,10 +44,10 @@ $result = $stmt->get_result();
     <title>Cari-ResepKita</title>
 </head>
 
-<body class="bg-gray-50">
+<body class=" bg-center bg-repeat bg-[length:300px_auto]" style="background-image: url('assets/navbg.jpg')">
 
     <nav
-      class="flex justify-between items-center z-100 w-full shadow-xl py-5 px-8 bg-cover bg-center border- border-neutral-900"
+      class="flex justify-between  z-100 w-full mx-auto rounded- shadow-xl py-5 px-8 border-b border-neutral-900 bg-repeat bg-[length:300px_auto]"
       style="background-image: url('./assets/navbg.jpg')">
       
       <img src="assets/mega1.png" alt="" class="absolute right-27 -top-6 w-17 h-12 scale-150 z-100">
@@ -68,12 +68,12 @@ $result = $stmt->get_result();
                 type="text"
                 name="keyword"
                 value="<?= htmlspecialchars($keyword); ?>"
-                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md pl-3 pr-20 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                class="w-full bg-[#EFE6D5] placeholder:text-[#c5b598] text-[#c5b598] text-sm border border-[#c5b598] rounded-md pl-3 pr-20 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
                 placeholder="Jawa, Pecel, Nikmat..." />
               
               <button
                 type="submit"
-                class="absolute top-1 right-1 flex items-center rounded bg-slate-800 py-1 px-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none cursor-pointer"
+                class="absolute top-1 right-1 flex items-center rounded bg-orange-900 py-1 px-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none cursor-pointer"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mr-1">
                     <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
@@ -85,7 +85,7 @@ $result = $stmt->get_result();
             Halo, <?= htmlspecialchars($_SESSION['username']); ?>
           </span>
 
-          <a href="logout.php" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition whitespace-nowrap">
+          <a href="logout.php"  class="bg-orange-900 text-white px-4 py-2 rounded-full hover:scale-110 hover:bg-yellow-900 font-[Merryweather] duration-300">
             Logout
           </a>
 
@@ -94,7 +94,7 @@ $result = $stmt->get_result();
 
     <div class="pt-9"></div>
 
-    <section class="px-10 py-6">
+    <section class=" mt-5 px-10 py-6 bg-[#EFE6D5] mb-4 border-2 border-[#c5b598]">
         <h1 class="text-3xl font-bold text-yellow-950 font-[Playfair-Display]">
             Cari Resep
         </h1>
@@ -103,17 +103,17 @@ $result = $stmt->get_result();
         </p>
     </section>
 
-    <section class="mx-10 mb-10 bg-white rounded-lg shadow p-6">
+    <section class="mx-10 mb-10 bg-[#EFE6D5] shadow-2xl rounded-2xl border-2 border-[#c5b598] p-6">
         <h1 class="text-3xl font-[playfair-display] font-bold mb-8 text-yellow-950">
             <?= ($keyword != '') ? "Hasil Pencarian: '" . htmlspecialchars($keyword) . "'" : "Hasil Pencarian"; ?>
         </h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" >
 
             <?php if (mysqli_num_rows($result) > 0) : ?>
                 <?php while ($data = mysqli_fetch_assoc($result)) : ?>
 
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition flex flex-col justify-between">
+                    <div class="border-2 border-[#c5b598] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition flex flex-col justify-between" style="background-image: url('assets/card.png')">
                         <div>
                             <img
                                 src="uploads/<?= $data['foto']; ?>"
@@ -150,7 +150,7 @@ $result = $stmt->get_result();
                             </a>
 
                             <a href="delete.php?id=<?= $data['id_resep']; ?>"
-                                class="inline-block font-[fredoka] bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded text-sm transition"
+                                class="inline-block font-[fredoka] bg-orange-900 hover:bg-yellow-700 text-white px-4 py-2 rounded text-sm"
                                 onclick="return confirm('Hapus resep ini?')">
                                 Hapus
                             </a>
@@ -169,7 +169,7 @@ $result = $stmt->get_result();
         <div class="flex items-center mt-4 font-[Fredoka] gap-3">
 
                 <a href="index.php"
-                    class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded">
+                    class="bg-red-700 text-white px-4 py-2 rounded hover:scale-110 hover:bg-red-900 font-[Merryweather] duration-300">
                     Kembali
                 </a>
 
